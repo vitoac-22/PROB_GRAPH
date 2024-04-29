@@ -20,8 +20,6 @@ prob_str <- readline("Ingrese el valor de la probabilidad: ")
 prob_str <- eval(parse(text = prob_str))
 prob <- as.numeric(prob_str)
 
-dgeom(2, 10/17)
-
 # Gráfica de la función
 x_dgeom <- seq(1,n, by = 1)
 y_dgeom <- dgeom(x_dgeom-1, prob = prob)
