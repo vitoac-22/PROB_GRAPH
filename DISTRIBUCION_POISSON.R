@@ -21,13 +21,26 @@ lambda <- as.numeric(lambda)
 n <- as.numeric(readline())
 
 # Gráfica de la función
-x_poisson <- seq(0, n, by = 1)
-y_poisson <- dpois(x_poisson, lambda = lambda)
+x_dpois <- seq(0, n, by = 1)
+y_dpois <- dpois(x_poisson, lambda = lambda)
 
-plot(x_poisson, y_poisson, main = "Función Densidad - Distribución Poisson",
+plot(x_dpois, y_dpois, main = "Función Densidad - Distribución Poisson",
      xlab = 'Valores de x', ylab = 'Valores de f(x)',
      type = "b", col = "black")
 
 abline(v = lambda, col= "blue", lty = 3)
 
+# ---------------------------------------------------
+# FUNCIÓN DISTRIBUCIÓN
+# ---------------------------------------------------
+
+y_ppois <- ppois(x_poisson, lambda = lambda)
+
+# Crear un gráfico de dispersión
+plot(x_dpois, y_ppois, main = "Función Distribución Poisson",
+     xlab = 'Valores de x', ylab = 'Valores de F(x)',
+     type = "b", col = "black")
+
+# Agregar una línea horizontal en y = 1 (coloreada de azul con estilo punteado)
+abline(h = 1, col = "blue", lty = 3)
 
