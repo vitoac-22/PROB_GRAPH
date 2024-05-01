@@ -36,3 +36,17 @@ plot(x_hyper, y_hyper, main = "Función Densidad - Distribución Hipergeométric
      type = "b", col = "black")
 abline(v = (n_hyper * pob_hyper)/(pob_hyper + b_hyper), col= "blue", lty = 3)
 
+# ---------------------------------------------------
+# FUNCIÓN DISTRIBUCIÓN
+# ---------------------------------------------------
+y_phyper <- phyper(x_hyper, pob_hyper, b_hyper, n_hyper)
+
+plot(x_hyper, y_phyper, main = "Función Distribución - Hipergeométrica",
+     xlab = 'Valores de x', ylab = 'Valores de F(x)',
+     type = "b", col = "black")
+
+abline(h = 1, col= "blue", lty = 3)
+
+
+
+
