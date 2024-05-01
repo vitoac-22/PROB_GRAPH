@@ -23,17 +23,21 @@ n_unif <- a_unif  + b_unif
 
 
 # Gráfica
-x_unif <- seq(0, n_unif, by = 1)
+x_unif <- seq(0, n_unif, by = 0.1)
 y_unif <- dunif(x_unif, a_unif, b_unif)
 
 plot(x_unif, y_unif, main = "Función Densidad - Distribución Uniforme",
      xlab = 'Valores de x', ylab = 'Valores de f(x)',
-     type = "b", col = "black")
+     type = "l", col = "black")
 abline(v = (a_unif + b_unif)/2, col= "blue", lty = 3)
 
+# ---------------------------------------------------
+# FUNCIÓN DISTRIBUCIÓN
+# ---------------------------------------------------
+y_punif <- punif(x_unif, a_unif, b_unif)
 
+plot(x_unif, y_punif, main = "Función Distribución - Uniforme",
+     xlab = 'Valores de x', ylab = 'Valores de F(x)',
+     type = "l", col = "black")
 
-
-
-# Función Distribución
-punif(20, 17, 40)
+abline(h = 1, col= "blue", lty = 3)
